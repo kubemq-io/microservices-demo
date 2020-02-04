@@ -1,0 +1,11 @@
+<h2>Logout</h2>
+<form #form="ngForm" (submit)="onSubmit(form)" autocomplete="off">
+  <div class="form-group">
+    <label>USER ID</label>
+    <input name="UserId" #UserId="ngModel" [(ngModel)]="apiService.logoutFormData.user_id" class="form-control" required>
+    <div class="validation-error" *ngIf="UserId.invalid && UserId.touched">This field is required.</div>
+  </div>
+  <div class="form-group">
+    <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block">LOGOUT</button>
+  </div>
+</form>

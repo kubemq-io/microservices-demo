@@ -1,0 +1,9 @@
+port: "8888"
+kubeMQHost: "localhost"
+kubeMQPort: 50000
+usersChannel: "users"
+cacheChannel: "cache"
+historyChannel: "history"
+auditChannel: "audit"
+logsChannel: "logs"
+configChannel: "config"

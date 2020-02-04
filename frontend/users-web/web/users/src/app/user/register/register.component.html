@@ -1,0 +1,21 @@
+<h2>Register</h2>
+<form #form="ngForm" (submit)="onSubmit(form)" autocomplete="off">
+  <div class="form-group">
+    <label>USER NAME</label>
+    <input name="Name" #Name="ngModel" [(ngModel)]="apiService.registerFormData.name" class="form-control" required>
+    <div class="validation-error" *ngIf="Name.invalid && Name.touched">This field is required.</div>
+  </div>
+  <div class="form-group">
+    <label>PASSWORD</label>
+    <input name="Password" #Password="ngModel" [(ngModel)]="apiService.registerFormData.password" class="form-control" required>
+    <div class="validation-error" *ngIf="Password.invalid && Password.touched">This field is required.</div>
+  </div>
+  <div class="form-group">
+    <label>EMAIL</label>
+    <input name="Email" #Email="ngModel" [(ngModel)]="apiService.registerFormData.email" class="form-control" required>
+    <div class="validation-error" *ngIf="Email.invalid && Email.touched">This field is required.</div>
+  </div>
+  <div class="form-group">
+    <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block">REGISTER</button>
+  </div>
+</form>

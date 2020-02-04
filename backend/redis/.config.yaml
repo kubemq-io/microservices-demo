@@ -1,0 +1,6 @@
+redisAddress: "localhost:6379"
+kubeMQHost: "localhost"
+kubeMQPort: 50000
+channel: "cache"
+group: ""
+historyChannel: "history"

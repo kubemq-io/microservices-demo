@@ -1,0 +1,5 @@
+elasticAddress: "http://localhost:9200"
+kubeMQHost: "localhost"
+kubeMQPort: 50000
+channel: "history"
+group: ""
